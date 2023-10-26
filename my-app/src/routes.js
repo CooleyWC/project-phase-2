@@ -1,21 +1,24 @@
 import App from './App';
-import QuestionContainer from './QuestionContainer';
 import Form from './Form';
+import ReviewPage from './ReviewPage';
+import ResourcePage from './ResourcePage';
 
 const routes = [
     {
         path: "/",
-        element: <App />,
-        children: [
-            {
-                path: "/qcontainer",
-                element: <QuestionContainer/>
-            }
-        ]
+        element: <App />
     },
     {
         path: '/form',
         element: <Form />
+    },
+    {
+        path: './review',
+        element: <ReviewPage/>
+    },
+    {
+        path: './resoures',
+        element: <ResourcePage />
     }
 ]
 

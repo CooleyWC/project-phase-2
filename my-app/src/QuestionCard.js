@@ -1,8 +1,9 @@
 import React from 'react';
 
+
 const QuestionCard = ({questionTitle}) => {
     return (
-        <div>
+        <div className='question-card'>
             <h3>{questionTitle}</h3>
         </div>
     );

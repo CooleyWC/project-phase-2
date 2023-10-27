@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 import Header from './Header';
 import {Outlet} from 'react-router-dom'
+
+import './index.css'
 
 function App() {
   const URL = 'http://localhost:3001/questions'

@@ -1,15 +1,25 @@
 import App from './App';
+import Main from './Main';
 import Form from './Form';
 import ReviewPage from './ReviewPage';
 import ResourcePage from './ResourcePage';
+import ErrorPage from './ErrorPage';
+
 
 const routes = [
     {
         path: "/",
-        element: <App />
+        element: <App />,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: "/questions",
+                element: <Main />
+            }
+        ]
     },
     {
-        path: '/form',
+        path: '/question/new',
         element: <Form />
     },
     {

@@ -9,6 +9,7 @@ const QuestionList = () => {
         return <QuestionCard 
         key={question.id} 
         questionTitle={question.title}
+        questionAnswer={question.answer}
         />
     })
 

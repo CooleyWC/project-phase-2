@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 
 
-const QuestionCard = ({questionTitle, questionAnswer}) => {
+const QuestionCard = ({questionTitle, questionAnswer, questionImage}) => {
     const [cardFront, setCardFront] = useState(true);
+
+
 
 const handleCardClick = ()=>{
     setCardFront(!cardFront)
@@ -12,7 +14,8 @@ const handleCardClick = ()=>{
         <div className='question-card'
             onClick={handleCardClick}
         >
-            {cardFront ? <h3>{questionTitle}</h3> : <p>{questionAnswer}</p>}
+            {cardFront ? <h3>{questionTitle}</h3>
+            : <><p>{questionAnswer}</p><img className='code-image' src={questionImage} alt='uh oh'/> </>}
         </div>
     );
 };

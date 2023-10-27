@@ -10,6 +10,7 @@ const QuestionList = () => {
         key={question.id} 
         questionTitle={question.title}
         questionAnswer={question.answer}
+        questionImage={question.code}
         />
     })
 

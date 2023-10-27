@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Header from './Header';
+import {Outlet} from 'react-router-dom'
 
 function App() {
+  const URL = 'http://localhost:3001/questions'
 
   const [questionData, setQuestionData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(()=>{
-    fetch('http://localhost:3001/questions')
+    fetch(URL)
     .then(res=>res.json())
     .then((data)=>{
       setQuestionData(data);
@@ -20,7 +23,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Project</h1>
+      <Header />
+      <Outlet context={{
+        questionData, 
+        setQuestionData,
+        isLoaded,
+        setIsLoaded,
+        URL 
+        }}
+        />
     </div>
   );
 }

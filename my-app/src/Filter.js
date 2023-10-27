@@ -1,0 +1,11 @@
+import React from 'react';
+
+const Filter = () => {
+    return (
+        <div>
+            <h1>Yo Filter</h1>
+        </div>
+    );
+};
+
+export default Filter;

@@ -2,7 +2,7 @@
     "questions": [
         {
             "id": 1,
-            "question": "Describe JSX",
+            "title": "Describe JSX",
             "answer": "JSX stands for JavaScript XML. It is a syntax extension for JavaScript that allows you to write HTML-like code within your JavaScript code. JSX is primarily used in React applications to define the structure and appearance of the user interface.JSX looks similar to HTML, but it is not exactly the same. It allows you to write HTML-like elements and components, but it also allows you to include JavaScript expressions within curly braces {}. This makes it easy to dynamically generate content and handle logic within your user interfaces.",
             "category": "JSX",
             "difficult": "easy",
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "question": "Describe State",
+            "title": "Describe State",
             "answer": "useState is a React hook that allows you to add state to functional components. It takes an initial value as an argument and returns an array with two elements: the current state value and a function to update it. By using useState, you can manage and update state within your functional components, enabling dynamic and interactive behavior in your React applications.",
             "category": "State",
             "difficult": "medium",
@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "question": "Describe Props",
+            "title": "Describe Props",
             "answer": "Props, short for properties, are a way to pass data from a parent component to a child component in React. They are read-only and immutable, meaning that the child component cannot modify the props it receives. Props allow for the reuse of components and enable dynamic rendering based on the data passed to them.",
             "category": "Props",
             "difficult": "easy",

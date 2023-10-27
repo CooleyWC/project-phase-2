@@ -1,12 +1,20 @@
 import React from 'react';
 import { useOutletContext } from 'react-router-dom';
+import QuestionCard from './QuestionCard';
 
 const QuestionList = () => {
     const {questionData, setQuestionData, isLoaded, setIsLoaded,} = useOutletContext();
-    
+
+    const questionListings = questionData.map((question)=>{
+        return <QuestionCard 
+        key={question.id} 
+        questionTitle={question.title}
+        />
+    })
+
     return (
         <div>
-            <h1>Question List</h1>
+            {questionListings}
         </div>
     );
 };

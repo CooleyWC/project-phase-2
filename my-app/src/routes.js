@@ -17,12 +17,12 @@ const routes = [
             {
                 path: "/",
                 element: <QuestionList/>
-            }
+            },
+            {
+                path: '/question/new',
+                element: <Form />
+            },
         ]
-    },
-    {
-        path: '/question/new',
-        element: <Form />
     },
     {
         path: '/review',

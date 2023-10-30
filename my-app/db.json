@@ -4,7 +4,7 @@
             "id": 1,
             "title": "Describe JSX and how it is different from HTML",
             "answer": "JSX stands for JavaScript XML. It is a syntax extension for JavaScript that allows you to write HTML-like code within your JavaScript code. JSX is primarily used in React applications to define the structure and appearance of the user interface.JSX looks similar to HTML, but it is not exactly the same. It allows you to write HTML-like elements and components, but it also allows you to include JavaScript expressions within curly braces {}. This makes it easy to dynamically generate content and handle logic within your user interfaces.",
-            "category": "JSX",
+            "category": "jsx",
             "difficult": "easy",
             "code": "./logo192.png",
             "review": false
@@ -13,7 +13,7 @@
             "id": 2,
             "title": "Describe State",
             "answer": "useState is a React hook that allows you to add state to functional components. It takes an initial value as an argument and returns an array with two elements: the current state value and a function to update it. By using useState, you can manage and update state within your functional components, enabling dynamic and interactive behavior in your React applications.",
-            "category": "State",
+            "category": "state",
             "difficult": "medium",
             "code": "./logo192.png",
             "review": false
@@ -22,7 +22,7 @@
             "id": 3,
             "title": "Describe Props",
             "answer": "Props, short for properties, are a way to pass data from a parent component to a child component in React. They are read-only and immutable, meaning that the child component cannot modify the props it receives. Props allow for the reuse of components and enable dynamic rendering based on the data passed to them.",
-            "category": "Components-Props",
+            "category": "components-props",
             "difficult": "easy",
             "code": "./logo192.png",
             "review": false
@@ -31,7 +31,7 @@
             "id": 4,
             "title": "Explain the benefits of components and writing modular code",
             "answer": "Components and modular code provide benefits such as reusability, maintainability, scalability, and collaboration. They allow you to break down your code into smaller reusable pieces that can be easily maintained and updated. This approach makes it easier to scale your application and collaborate with other developers. Additionally, modular code improves testability and readability, leading to more efficient and understandable",
-            "category": "Components-Props",
+            "category": "components-props",
             "difficult": "easy",
             "code": "./logo192.png",
             "review": false
@@ -40,7 +40,7 @@
             "id": 5,
             "title": "Explain the ReactDOM.render() method including what arguments it takes and why it is important",
             "answer": "The ReactDOM.render() method is a crucial part of React. It takes two arguments: the first is the element or component you want to render, and the second is the DOM element where you want to render it. This method is important because it is responsible for rendering your React components into the browser's DOM. It allows you to update the user interface by re-rendering components when the underlying data changes, providing a smooth and dynamic user experience.",
-            "category": "Components-Props",
+            "category": "components-props",
             "difficult": "easy",
             "code": "./logo192.png",
             "review": false
@@ -49,7 +49,7 @@
             "id": 6,
             "title": "Explain prop descructuring",
             "answer": "Prop destructuring is a technique in JavaScript and React that allows you to extract specific properties from an object and assign them to variables with the same names. By using curly braces {} and specifying the property names, you can destructure props directly in the function signature or within the function body. This approach simplifies the code and makes it easier to access and use specific props in your components. It also helps improve readability and maintainability by clearly indicating which props are being used.",
-            "category": "Components-Props",
+            "category": "components-props",
             "difficult": "easy",
             "code": "./logo192.png",
             "review": false

@@ -12,7 +12,7 @@ const initialState = {
 }
 
 const Form = () => {
-    const {questionData} = useOutletContext();
+    const {questionData, URL} = useOutletContext();
  
     const [formData, setFormData] = useState(initialState);
     const [titleInput, setTitleInput] = useState('');
@@ -33,7 +33,18 @@ const Form = () => {
             "review": false
         }
         console.log(newQuestion)
+
+        fetch(URL, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(newQuestion)
+        })
+        .then(res=>res.json())
+        .then((newItem)=>setFormData({...formData, newItem}))
     }
+    console.log(formData)
 
     return (
         <div>

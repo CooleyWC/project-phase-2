@@ -53,6 +53,42 @@
             "difficult": "easy",
             "code": "./logo192.png",
             "review": false
+        },
+        {
+            "id": 7,
+            "title": "Title 7",
+            "answer": "Title 7 answer",
+            "category": "state",
+            "difficult": "hard",
+            "code": "./logo192.png",
+            "review": false
+        },
+        {
+            "id": 8,
+            "title": "Title 8",
+            "answer": "Title 8 answer",
+            "category": "router",
+            "difficult": "medium",
+            "code": "./logo192.png",
+            "review": false
+        },
+        {
+            "id": 9,
+            "title": "Title 9",
+            "answer": "Title 9 answer",
+            "category": "forms",
+            "difficult": "medium",
+            "code": "./logo192.png",
+            "review": false
+        },
+        {
+            "id": 10,
+            "title": "Title 10",
+            "answer": "Title 10 answer",
+            "category": "forms",
+            "difficult": "hard",
+            "code": "./logo192.png",
+            "review": false
         }
 
     ]

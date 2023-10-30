@@ -5,19 +5,19 @@ import Filter from './Filter';
 
 const QuestionList = () => {
     const {questionData, setQuestionData, isLoaded, setIsLoaded,} = useOutletContext();
-    const [dropDownSelect, setdropDownSelect] = useState('all')
+    const [filteredQuestions, setFilteredQuestions] = useState('all')
    
 
 
     const handleCategoryFilter = (e) =>{
-        setdropDownSelect(e.target.value);
+        setFilteredQuestions(e.target.value);
     }
 
     const filteredCategories = questionData.filter((question)=>{
-        if(dropDownSelect==='all'){
-            return question
+        if(filteredQuestions==='all'){
+            return true
         } else {
-        return question.category === dropDownSelect
+        return question.category === filteredQuestions
         }
     })
 
@@ -33,7 +33,7 @@ const QuestionList = () => {
 
     return (
         <div>
-            <Filter handleCategoryFilter={handleCategoryFilter}/>
+            <Filter handleCategoryFilter={handleCategoryFilter} filteredQuestions={filteredQuestions}/>
             {questionListings}
         </div>
     );

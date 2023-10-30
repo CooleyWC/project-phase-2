@@ -4,10 +4,10 @@ import QuestionCard from './QuestionCard';
 import Filter from './Filter';
 
 const QuestionList = () => {
-    const {questionData, setQuestionData, isLoaded, setIsLoaded,} = useOutletContext();
+    const {questionData, setQuestionData} = useOutletContext();
     const [filteredQuestions, setFilteredQuestions] = useState('all');
     const [difficultyFilter, setDifficultyFilter] = useState('all')
-   
+    const [search, setSearch] = useState('')
 
 
     const handleCategoryFilter = (e) =>{
@@ -36,9 +36,18 @@ const QuestionList = () => {
         }
     })
 
-    console.log(filteredDifficulty)
+    const handleSearchChange = (e)=>{
+        setSearch(e.target.value)
+        // console.log(search)
+    }
 
-    const questionListings = filteredDifficulty.map((question)=>{
+    const filteredSearch = filteredDifficulty.filter((question)=>{
+        return question.title.toLowerCase().includes(search.toLowerCase())
+    })
+
+    console.log(filteredSearch)
+
+    const questionListings = filteredSearch.map((question)=>{
         return <QuestionCard 
         key={question.id}
         questionId={question.id} 
@@ -54,7 +63,8 @@ const QuestionList = () => {
             filteredQuestions={filteredQuestions}
             handleDifficultyFilter={handleDifficultyFilter}
             difficultyFilter={difficultyFilter}
-            
+            search={search}
+            handleSearchChange={handleSearchChange}
             />
             {questionListings}
         </div>

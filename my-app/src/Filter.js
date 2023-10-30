@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 // import { useOutletContext } from 'react-router-dom';
 
-const Filter = ({handleCategoryFilter, filteredQuestions, handleDifficultyFilter, difficultyFilter}) => {
+const Filter = ({handleCategoryFilter, filteredQuestions, handleDifficultyFilter, difficultyFilter, search, handleSearchChange}) => {
     // const {questionData} = useOutletContext();
     // const [dropDownSelect, setdropDownSelect] = useState('select a category')
 
@@ -25,6 +25,9 @@ const Filter = ({handleCategoryFilter, filteredQuestions, handleDifficultyFilter
                     <option value='medium'>Medium</option>
                     <option value='advanced'>Advanced</option>
                 </select>
+            </label>
+            <label>
+                <input type='text' placeholder='search for question' onChange={handleSearchChange} value={search}/>
             </label>
         </div>
     );

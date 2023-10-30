@@ -21,7 +21,8 @@ const handleReviewClick = (e, reviewId)=>{
             onClick={handleCardClick}
         >
             {cardFront ? <h3>{questionTitle}</h3>
-            : <><p>{questionAnswer}</p><img className='code-image' src={questionImage} alt='uh oh'/><button onClick={(e)=>handleReviewClick(e, questionId)}>Add to Review</button> </>}
+            : <><p>{questionAnswer}</p><img className='code-image' src={questionImage} alt='uh oh'/>
+            <button onClick={(e)=>handleReviewClick(e, questionId)}>Add to Review</button> </>}
             
         </div>
     );

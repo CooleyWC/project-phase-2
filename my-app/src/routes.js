@@ -25,11 +25,11 @@ const routes = [
         element: <Form />
     },
     {
-        path: './review',
+        path: '/review',
         element: <ReviewPage/>
     },
     {
-        path: './resoures',
+        path: '/resources',
         element: <ResourcePage />
     }
 ]

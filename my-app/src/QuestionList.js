@@ -24,7 +24,7 @@ const QuestionList = () => {
 
     const handleDifficultyFilter = (e)=>{
         setDifficultyFilter(e.target.value);
-        console.log(difficultyFilter)
+        // console.log(difficultyFilter)
     }
 
 
@@ -45,7 +45,7 @@ const QuestionList = () => {
         return question.title.toLowerCase().includes(search.toLowerCase())
     })
 
-    console.log(filteredSearch)
+    // console.log(filteredSearch)
 
     const questionListings = filteredSearch.map((question)=>{
         return <QuestionCard 

@@ -22,10 +22,23 @@ const Form = () => {
     const [imageInput, setImageInput] = useState('');
 
 
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        const newQuestion = {
+            "title": titleInput,
+            "answer": answerInput,
+            "category": categorySelect,
+            "difficulty": difficultySelect,
+            "code": "./logo192.png",
+            "review": false
+        }
+        console.log(newQuestion)
+    }
+
     return (
         <div>
             <h1>Form</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input type='text' placeholder='enter question' value={titleInput} onChange={(e)=>{setTitleInput(e.target.value)}}/>
                 <input type='text' placeholder='enter answer' value={answerInput} onChange={(e)=>{setAnswerInput(e.target.value)}}/>
                 <label>
@@ -46,6 +59,7 @@ const Form = () => {
                     </select>
                 </label>
                 <input type='text' placeholder='Enter code image' value={imageInput} onChange={(e)=>{setImageInput(e.target.value)}}/>
+                <input type='submit' placeholder='Submit' />
             </form>
         </div>
     );

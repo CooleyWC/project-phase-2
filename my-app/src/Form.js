@@ -32,7 +32,7 @@ const Form = () => {
             "code": "./logo192.png",
             "review": false
         }
-        console.log(newQuestion)
+      
 
         fetch(URL, {
             method: "POST",
@@ -42,9 +42,12 @@ const Form = () => {
             body: JSON.stringify(newQuestion)
         })
         .then(res=>res.json())
-        .then((newItem)=>setFormData({...formData, newItem}))
+        .then((newItem)=>{
+            setFormData(prevValue=>({...prevValue, newItem}))
+            setFormData(initialState)
+        })
     }
-    console.log(formData)
+
 
     return (
         <div>

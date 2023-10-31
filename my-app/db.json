@@ -116,6 +116,24 @@
       "code": "./logo192.png",
       "review": false,
       "id": 13
+    },
+    {
+      "title": "yikes",
+      "answer": "yikes",
+      "category": "jsx",
+      "difficulty": "advanced",
+      "code": "./logo192.png",
+      "review": false,
+      "id": 14
+    },
+    {
+      "title": "yo",
+      "answer": "yo",
+      "category": "components-props",
+      "difficulty": "easy",
+      "code": "./logo192.png",
+      "review": false,
+      "id": 15
     }
   ]
 }

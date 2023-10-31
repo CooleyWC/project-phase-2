@@ -98,6 +98,15 @@
       "code": "./logo192.png",
       "review": false,
       "id": 11
+    },
+    {
+      "title": "12",
+      "answer": "12",
+      "category": "jsx",
+      "difficulty": "medium",
+      "code": "./logo192.png",
+      "review": false,
+      "id": 12
     }
   ]
 }

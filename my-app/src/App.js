@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState} from 'react';
 import Header from './Header';
-import {Outlet} from 'react-router-dom'
+import {Outlet, useNavigate} from 'react-router-dom'
 
 import './index.css'
 
@@ -27,6 +27,7 @@ function App() {
   const [categorySelect, setCategorySelect] = useState('');
   const [difficultySelect, setDifficultySelect] = useState('');
   const [imageInput, setImageInput] = useState('');
+  const navigate = useNavigate();
 
   useEffect(()=>{
     fetch(URL)
@@ -63,6 +64,7 @@ function App() {
       .then((newItem)=>{
           setQuestionData(prevValue=>([...prevValue, newItem]))
           setFormData(initialState)
+          navigate('/');
       })
   }
 

@@ -1,7 +1,5 @@
 import App from './App';
-// import Main from './Main';
 import QuestionList from './QuestionList';
-// import Filter from './Filter';
 import Form from './Form';
 import ReviewPage from './ReviewPage';
 import ResourcePage from './ResourcePage';

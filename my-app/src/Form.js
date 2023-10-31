@@ -14,47 +14,14 @@ const initialState = {
 const Form = () => {
     const {titleInput, setTitleInput, answerInput, setAnswerInput, categorySelect, 
         setCategorySelect, difficultySelect, setDifficultySelect, imageInput, setImageInput, handleSubmit} = useOutletContext();
- 
-    // const [formData, setFormData] = useState(initialState);
-    // const [titleInput, setTitleInput] = useState('');
-    // const [answerInput, setAnswerInput] = useState('');
-    // const [categorySelect, setCategorySelect] = useState('');
-    // const [difficultySelect, setDifficultySelect] = useState('');
-    // const [imageInput, setImageInput] = useState('');
-
-
-    // const handleSubmit = (e) =>{
-    //     e.preventDefault()
-    //     const newQuestion = {
-    //         "title": titleInput,
-    //         "answer": answerInput,
-    //         "category": categorySelect,
-    //         "difficulty": difficultySelect,
-    //         "code": "./logo192.png",
-    //         "review": false
-    //     }
-
-    //     fetch(URL, {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-type": "application/json"
-    //         },
-    //         body: JSON.stringify(newQuestion)
-    //     })
-    //     .then(res=>res.json())
-    //     .then((newItem)=>{
-    //         setFormData(prevValue=>({...prevValue, newItem}))
-    //         setFormData(initialState)
-    //     })
-    // }
 
 
     return (
         <div>
             <h1>Form</h1>
             <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='enter question' value={titleInput} onChange={(e)=>{setTitleInput(e.target.value)}}/>
-                <input type='text' placeholder='enter answer' value={answerInput} onChange={(e)=>{setAnswerInput(e.target.value)}}/>
+                <textarea name='question-input' placeholder='enter question' value={titleInput} onChange={(e)=>{setTitleInput(e.target.value)}}/>
+                <textarea name='answer-input' placeholder='enter answer' value={answerInput} onChange={(e)=>{setAnswerInput(e.target.value)}}/>
                 <label>
                     <select value={categorySelect} onChange={(e)=>setCategorySelect(e.target.value)}>
                         <option value=''>--Select a Category--</option>

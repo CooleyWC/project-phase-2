@@ -12,7 +12,7 @@ const initialState = {
 }
 
 const Form = () => {
-    const {titleInput, setTitleInput, answerInput, setAnswerInput, categorySelect, 
+    const {titleInput, handleTitleInput, answerInput, handleAnswerInput, categorySelect, 
         setCategorySelect, difficultySelect, setDifficultySelect, imageInput, setImageInput, handleSubmit} = useOutletContext();
 
 
@@ -20,8 +20,8 @@ const Form = () => {
         <div>
             <h1>Form</h1>
             <form onSubmit={handleSubmit}>
-                <textarea name='question-input' placeholder='enter question' value={titleInput} onChange={(e)=>{setTitleInput(e.target.value)}}/>
-                <textarea name='answer-input' placeholder='enter answer' value={answerInput} onChange={(e)=>{setAnswerInput(e.target.value)}}/>
+                <textarea name='question-input' placeholder='enter question' value={titleInput} onChange={handleTitleInput}/>
+                <textarea name='answer-input' placeholder='enter answer' value={answerInput} onChange={handleAnswerInput}/>
                 <label>
                     <select value={categorySelect} onChange={(e)=>setCategorySelect(e.target.value)}>
                         <option value=''>--Select a Category--</option>

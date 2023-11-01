@@ -41,6 +41,17 @@ function App() {
 
   if(!isLoaded){return <h1>...Loading</h1>}
 
+  const handleTitleInput = (e)=>{
+    if(e.target.value.length<=1050){
+      setTitleInput(e.target.value)
+    }
+  }
+
+  const handleAnswerInput = (e)=>{
+    if(e.target.value.length<=1050){
+      setAnswerInput(e.target.value)
+    }
+  }
 
   const handleSubmit = (e) =>{
       e.preventDefault()
@@ -70,7 +81,7 @@ function App() {
 
   const handleReviewClick = (e, obj)=>{
     e.stopPropagation()
-    // console.log(obj)
+
     fetch(`http://localhost:3001/questions/${obj.id}`, {
         method: "PATCH", 
         headers: {
@@ -106,8 +117,8 @@ function App() {
         questionData, setQuestionData,
         isLoaded, setIsLoaded,
         URL,
-        titleInput, setTitleInput,
-        answerInput, setAnswerInput,
+        titleInput, handleTitleInput,
+        answerInput, handleAnswerInput,
         categorySelect, setCategorySelect,
         difficultySelect, setDifficultySelect,
         imageInput, setImageInput,

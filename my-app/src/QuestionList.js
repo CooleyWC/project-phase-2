@@ -24,7 +24,6 @@ const QuestionList = () => {
 
     const handleDifficultyFilter = (e)=>{
         setDifficultyFilter(e.target.value);
-        // console.log(difficultyFilter)
     }
 
 
@@ -38,14 +37,29 @@ const QuestionList = () => {
 
     const handleSearchChange = (e)=>{
         setSearch(e.target.value)
-        // console.log(search)
     }
 
     const filteredSearch = filteredDifficulty.filter((question)=>{
         return question.title.toLowerCase().includes(search.toLowerCase())
     })
 
-    // console.log(filteredSearch)
+    const handleReviewClick = (e, obj)=>{
+        e.stopPropagation()
+        console.log(obj)
+        fetch(`http://localhost:3001/questions/${obj.id}`, {
+            method: "PATCH", 
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({
+                review: !obj.review,
+            })
+        })
+        .then(res=>res.json())
+        .then((updatedQuestion)=>console.log(updatedQuestion))
+    
+    }
+
 
     const questionListings = filteredSearch.map((question)=>{
         return <QuestionCard 
@@ -54,6 +68,8 @@ const QuestionList = () => {
         questionTitle={question.title}
         questionAnswer={question.answer}
         questionImage={question.code}
+        handleReviewClick={handleReviewClick}
+        questionObj={question}
         />
     })
 

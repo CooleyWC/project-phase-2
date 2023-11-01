@@ -20,11 +20,11 @@ const routes = [
                 path: '/question/new',
                 element: <Form />
             },
+            {
+                path: '/review',
+                element: <ReviewPage/>
+            }
         ]
-    },
-    {
-        path: '/review',
-        element: <ReviewPage/>
     },
     {
         path: '/resources',

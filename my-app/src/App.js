@@ -68,6 +68,17 @@ function App() {
       })
   }
 
+  const handleQuestionUpdate= (updatedQuestion)=>{
+    const updatedQuestions = questionData.map((question)=>{
+      if(question.id === updatedQuestion.id){
+        return updatedQuestion
+      } else {
+        return question
+      }
+    });
+    setQuestionData(updatedQuestions)
+  }
+  console.log(questionData[0])
 
   return (
     <div className="App">
@@ -81,7 +92,8 @@ function App() {
         categorySelect, setCategorySelect,
         difficultySelect, setDifficultySelect,
         imageInput, setImageInput,
-        handleSubmit 
+        handleSubmit,
+        handleQuestionUpdate 
         }}
         />
     </div>

@@ -4,7 +4,7 @@ import QuestionCard from './QuestionCard';
 import Filter from './Filter';
 
 const QuestionList = () => {
-    const {questionData, setQuestionData} = useOutletContext();
+    const {questionData, setQuestionData, handleQuestionUpdate} = useOutletContext();
     const [filteredQuestions, setFilteredQuestions] = useState('all');
     const [difficultyFilter, setDifficultyFilter] = useState('all')
     const [search, setSearch] = useState('')
@@ -56,7 +56,9 @@ const QuestionList = () => {
             })
         })
         .then(res=>res.json())
-        .then((updatedQuestion)=>console.log(updatedQuestion))
+        .then((updatedQuestion)=>{
+            handleQuestionUpdate(updatedQuestion)
+        })
     
     }
 

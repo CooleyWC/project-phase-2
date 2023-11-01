@@ -7,7 +7,7 @@
       "category": "jsx",
       "difficulty": "easy",
       "code": "./logo192.png",
-      "review": false
+      "review": true
     },
     {
       "id": 2,
@@ -98,7 +98,6 @@
       "difficulty": "advanced",
       "code": "./logo192.png",
       "review": false
-
     },
     {
       "title": "How many JSX elements can a component return",

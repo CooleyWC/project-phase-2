@@ -1,16 +1,6 @@
 import React from 'react';
 import { useOutletContext } from 'react-router-dom';
 
-
-const initialState = {
-    "title": "",
-    "answer": "",
-    "category": "",
-    "difficulty": "",
-    "code": "./logo192.png",
-    "review": false
-}
-
 const Form = () => {
     const {titleInput, handleTitleInput, answerInput, handleAnswerInput, categorySelect, 
         setCategorySelect, difficultySelect, setDifficultySelect, imageInput, setImageInput, handleSubmit} = useOutletContext();
@@ -20,8 +10,8 @@ const Form = () => {
         <div>
             <h1>Form</h1>
             <form onSubmit={handleSubmit}>
-                <textarea name='question-input' placeholder='enter question' value={titleInput} onChange={handleTitleInput}/>
-                <textarea name='answer-input' placeholder='enter answer' value={answerInput} onChange={handleAnswerInput}/>
+                <textarea name='question-input' placeholder='Enter question (limit 75 characters)' value={titleInput} onChange={handleTitleInput}/>
+                <textarea name='answer-input' placeholder='Enter answer (limit 1050 characters)' value={answerInput} onChange={handleAnswerInput}/>
                 <label>
                     <select value={categorySelect} onChange={(e)=>setCategorySelect(e.target.value)}>
                         <option value=''>--Select a Category--</option>

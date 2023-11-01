@@ -3,13 +3,14 @@ import React, {useState} from 'react';
 
 const QuestionCard = ({questionTitle, questionAnswer, questionImage, questionId, questionObj, handleReviewClick}) => {
     const [cardFront, setCardFront] = useState(true);
-    const [showAdd, setShowAdd] = useState(true)
+
 
 // console.log(questionObj)
 
 const handleCardClick = ()=>{
     setCardFront(!cardFront)
 }
+
 
 
 
@@ -21,8 +22,7 @@ const handleCardClick = ()=>{
             : <><p>{questionAnswer}</p><img className='code-image' src={questionImage} alt='uh oh'/>
             <button onClick={(e)=>{
                 handleReviewClick(e, questionObj)
-                setShowAdd(!showAdd)
-                }}>{showAdd ? 'Add to Review': 'Remove from Review'}</button> </>}
+                }}>{questionObj.review ? 'Remove from Review': 'Add to Review'}</button> </>}
             
         </div>
     );

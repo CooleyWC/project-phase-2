@@ -74,6 +74,8 @@ function App() {
       .then(res=>res.json())
       .then((newItem)=>{
           setQuestionData(prevValue=>([...prevValue, newItem]))
+          setTitleInput('')
+          setAnswerInput('')
           setFormData(initialState)
           navigate('/');
       })

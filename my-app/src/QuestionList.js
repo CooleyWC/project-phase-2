@@ -4,7 +4,7 @@ import QuestionCard from './QuestionCard';
 import Filter from './Filter';
 
 const QuestionList = () => {
-    const {questionData, setQuestionData, handleQuestionUpdate} = useOutletContext();
+    const {questionData, setQuestionData, handleQuestionUpdate, handleReviewClick} = useOutletContext();
     const [filteredQuestions, setFilteredQuestions] = useState('all');
     const [difficultyFilter, setDifficultyFilter] = useState('all')
     const [search, setSearch] = useState('')
@@ -43,24 +43,24 @@ const QuestionList = () => {
         return question.title.toLowerCase().includes(search.toLowerCase())
     })
 
-    const handleReviewClick = (e, obj)=>{
-        e.stopPropagation()
-        console.log(obj)
-        fetch(`http://localhost:3001/questions/${obj.id}`, {
-            method: "PATCH", 
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify({
-                review: !obj.review,
-            })
-        })
-        .then(res=>res.json())
-        .then((updatedQuestion)=>{
-            handleQuestionUpdate(updatedQuestion)
-        })
+    // const handleReviewClick = (e, obj)=>{
+    //     e.stopPropagation()
+    //     // console.log(obj)
+    //     fetch(`http://localhost:3001/questions/${obj.id}`, {
+    //         method: "PATCH", 
+    //         headers: {
+    //             "Content-type": "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //             review: !obj.review,
+    //         })
+    //     })
+    //     .then(res=>res.json())
+    //     .then((updatedQuestion)=>{
+    //         handleQuestionUpdate(updatedQuestion)
+    //     })
     
-    }
+    // }
 
 
     const questionListings = filteredSearch.map((question)=>{

@@ -25,10 +25,6 @@ const routes = [
                 element: <ReviewPage/>
             }
         ]
-    },
-    {
-        path: '/resources',
-        element: <ResourcePage />
     }
 ]
 

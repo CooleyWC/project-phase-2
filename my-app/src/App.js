@@ -68,6 +68,25 @@ function App() {
       })
   }
 
+  const handleReviewClick = (e, obj)=>{
+    e.stopPropagation()
+    // console.log(obj)
+    fetch(`http://localhost:3001/questions/${obj.id}`, {
+        method: "PATCH", 
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({
+            review: !obj.review,
+        })
+    })
+    .then(res=>res.json())
+    .then((updatedQuestion)=>{
+        handleQuestionUpdate(updatedQuestion)
+    })
+
+}
+
   const handleQuestionUpdate= (updatedQuestion)=>{
     const updatedQuestions = questionData.map((question)=>{
       if(question.id === updatedQuestion.id){
@@ -78,7 +97,7 @@ function App() {
     });
     setQuestionData(updatedQuestions)
   }
-  console.log(questionData[0])
+
 
   return (
     <div className="App">
@@ -93,6 +112,7 @@ function App() {
         difficultySelect, setDifficultySelect,
         imageInput, setImageInput,
         handleSubmit,
+        handleReviewClick,
         handleQuestionUpdate 
         }}
         />

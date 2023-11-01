@@ -1,18 +1,9 @@
 import { useEffect, useState} from 'react';
 import Header from './Header';
-import {Outlet, useNavigate} from 'react-router-dom'
+import {Outlet} from 'react-router-dom'
 
 import './index.css'
 
-
-const initialState = {
-  "title": "",
-  "answer": "",
-  "category": "",
-  "difficulty": "",
-  "code": "./logo192.png",
-  "review": false
-}
 
 
 function App() {
@@ -21,13 +12,6 @@ function App() {
   const [questionData, setQuestionData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const [formData, setFormData] = useState(initialState);
-  const [titleInput, setTitleInput] = useState('');
-  const [answerInput, setAnswerInput] = useState('');
-  const [categorySelect, setCategorySelect] = useState('');
-  const [difficultySelect, setDifficultySelect] = useState('');
-  const [imageInput, setImageInput] = useState('');
-  const navigate = useNavigate();
 
   useEffect(()=>{
     fetch(URL)
@@ -41,44 +25,10 @@ function App() {
 
   if(!isLoaded){return <h1>...Loading</h1>}
 
-  const handleTitleInput = (e)=>{
-    if(e.target.value.length<=75){
-      setTitleInput(e.target.value)
-    }
-  }
 
-  const handleAnswerInput = (e)=>{
-    if(e.target.value.length<=1050){
-      setAnswerInput(e.target.value)
-    }
-  }
-
-  const handleSubmit = (e) =>{
-      e.preventDefault()
-      const newQuestion = {
-          "title": titleInput,
-          "answer": answerInput,
-          "category": categorySelect,
-          "difficulty": difficultySelect,
-          "code": "./logo192.png",
-          "review": false
-      }
-
-      fetch(URL, {
-          method: "POST",
-          headers: {
-              "Content-type": "application/json"
-          },
-          body: JSON.stringify(newQuestion)
-      })
-      .then(res=>res.json())
-      .then((newItem)=>{
-          setQuestionData(prevValue=>([...prevValue, newItem]))
-          setTitleInput('')
-          setAnswerInput('')
-          setFormData(initialState)
-          navigate('/');
-      })
+  const onAddNewQuestion = (newQuestion)=>{
+    console.log(newQuestion)
+    setQuestionData(prevValue=>([...prevValue, newQuestion]))
   }
 
   const handleReviewClick = (e, obj)=>{
@@ -117,16 +67,10 @@ function App() {
       <Header />
       <Outlet context={{
         questionData, setQuestionData,
-        isLoaded, setIsLoaded,
         URL,
-        titleInput, handleTitleInput,
-        answerInput, handleAnswerInput,
-        categorySelect, setCategorySelect,
-        difficultySelect, setDifficultySelect,
-        imageInput, setImageInput,
-        handleSubmit,
         handleReviewClick,
-        handleQuestionUpdate 
+        handleQuestionUpdate,
+        onAddNewQuestion 
         }}
         />
     </div>

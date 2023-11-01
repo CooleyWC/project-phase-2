@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div className='header'>
             <NavBar />
-            <h1>Project 2</h1>
+            <h1>React Study Guide</h1>
         </div>
     );
 };

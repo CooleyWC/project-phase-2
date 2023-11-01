@@ -42,7 +42,7 @@ function App() {
   if(!isLoaded){return <h1>...Loading</h1>}
 
   const handleTitleInput = (e)=>{
-    if(e.target.value.length<=1050){
+    if(e.target.value.length<=75){
       setTitleInput(e.target.value)
     }
   }

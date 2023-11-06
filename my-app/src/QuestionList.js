@@ -2,8 +2,14 @@ import React, {useState} from 'react';
 import { useOutletContext } from 'react-router-dom';
 import QuestionCard from './QuestionCard';
 import Filter from './Filter';
+import { Container} from '@mui/system';
+import Grid from '@mui/material/Grid';
+
+
 
 const QuestionList = () => {
+
+
     const {questionData, handleReviewClick} = useOutletContext();
     const [filteredQuestions, setFilteredQuestions] = useState('all');
     const [difficultyFilter, setDifficultyFilter] = useState('all')
@@ -65,7 +71,13 @@ const QuestionList = () => {
             search={search}
             handleSearchChange={handleSearchChange}
             />
-            {questionListings}
+            <div>
+                <Container>
+                    <Grid container space={2} justify="center">
+                    {questionListings}
+                    </Grid>
+                </Container>
+            </div>
         </div>
     );
 };

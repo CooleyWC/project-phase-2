@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import React from 'react';
 
 
@@ -5,7 +6,7 @@ const Filter = ({handleCategoryFilter, filteredQuestions, handleDifficultyFilter
 
     return (
         <div>
-            <h1>Filter</h1>
+            <Typography variant='h4'>Filter</Typography>
             <label>
                 <select onChange={handleCategoryFilter} value={filteredQuestions}>
                     <option value='all'>--Select a Category--</option>

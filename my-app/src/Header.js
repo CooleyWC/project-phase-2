@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div className='header'>
             <NavBar />
-            <Typography variant="h1">React Study Guide</Typography>
+            <Typography variant="h2" style={{marginTop: '50px'}} gutterBottom>React Study Guide</Typography>
         </div>
     );
 };

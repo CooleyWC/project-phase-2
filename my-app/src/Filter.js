@@ -1,10 +1,7 @@
-import React, {useState} from 'react';
-// import { useOutletContext } from 'react-router-dom';
+import React from 'react';
+
 
 const Filter = ({handleCategoryFilter, filteredQuestions, handleDifficultyFilter, difficultyFilter, search, handleSearchChange}) => {
-    // const {questionData} = useOutletContext();
-    // const [dropDownSelect, setdropDownSelect] = useState('select a category')
-
 
     return (
         <div>

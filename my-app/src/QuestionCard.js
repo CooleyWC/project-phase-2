@@ -1,13 +1,9 @@
 import React, {useState} from 'react';
 
 
-
-
 const QuestionCard = ({questionTitle, questionAnswer, questionImage, questionId, questionObj, handleReviewClick}) => {
     const [cardFront, setCardFront] = useState(true);
 
-  
-// console.log(questionObj)
 
 const handleCardClick = ()=>{
     setCardFront(!cardFront)
@@ -19,8 +15,8 @@ const handleCardClick = ()=>{
             onClick={handleCardClick}
         >
             {cardFront ? <h3>{questionTitle}</h3>
-            : <><p>{questionAnswer}</p><img className='code-image' src={questionImage} alt='uh-oh'/>
-            <button onClick={(e)=>{
+            :   <><p>{questionAnswer}</p><img className='code-image' src={questionImage} alt='uh-oh'/>
+                <button onClick={(e)=>{
                 handleReviewClick(e, questionObj)
                 }}>{questionObj.review ? 'Remove from Review': 'Add to Review'}</button> </>}
             

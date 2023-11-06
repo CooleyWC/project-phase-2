@@ -4,7 +4,7 @@ import QuestionCard from './QuestionCard';
 import Filter from './Filter';
 
 const QuestionList = () => {
-    const {questionData, setQuestionData, handleQuestionUpdate, handleReviewClick} = useOutletContext();
+    const {questionData, handleReviewClick} = useOutletContext();
     const [filteredQuestions, setFilteredQuestions] = useState('all');
     const [difficultyFilter, setDifficultyFilter] = useState('all')
     const [search, setSearch] = useState('')
@@ -18,14 +18,13 @@ const QuestionList = () => {
         if(filteredQuestions==='all'){
             return true
         } else {
-        return question.category === filteredQuestions
+            return question.category === filteredQuestions
         }
     })
 
     const handleDifficultyFilter = (e)=>{
         setDifficultyFilter(e.target.value);
     }
-
 
     const filteredDifficulty = filteredCategories.filter((question)=>{
         if(difficultyFilter === 'all'){
@@ -46,19 +45,20 @@ const QuestionList = () => {
 
     const questionListings = filteredSearch.map((question)=>{
         return <QuestionCard 
-        key={question.id}
-        questionId={question.id} 
-        questionTitle={question.title}
-        questionAnswer={question.answer}
-        questionImage={question.code}
-        handleReviewClick={handleReviewClick}
-        questionObj={question}
+            key={question.id}
+            questionId={question.id} 
+            questionTitle={question.title}
+            questionAnswer={question.answer}
+            questionImage={question.code}
+            handleReviewClick={handleReviewClick}
+            questionObj={question}
         />
     })
 
     return (
         <div>
-            <Filter handleCategoryFilter={handleCategoryFilter} 
+            <Filter 
+            handleCategoryFilter={handleCategoryFilter} 
             filteredQuestions={filteredQuestions}
             handleDifficultyFilter={handleDifficultyFilter}
             difficultyFilter={difficultyFilter}

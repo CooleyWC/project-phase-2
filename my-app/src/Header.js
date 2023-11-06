@@ -1,11 +1,12 @@
 import React from 'react';
 import NavBar from './NavBar';
+import {Typography} from '@mui/material'
 
 const Header = () => {
     return (
         <div className='header'>
             <NavBar />
-            <h1>React Study Guide</h1>
+            <Typography variant="h1">React Study Guide</Typography>
         </div>
     );
 };

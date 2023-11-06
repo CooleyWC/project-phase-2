@@ -1,0 +1,11 @@
+.nav-link {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: left;
+    font-size: min(10vw, 20px)
+}
+
+.active {
+    color: purple;
+}

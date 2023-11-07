@@ -5,6 +5,17 @@ import Filter from './Filter';
 import { Container} from '@mui/system';
 import Grid from '@mui/material/Grid';
 
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+
+
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
 
 
 const QuestionList = () => {
@@ -49,17 +60,22 @@ const QuestionList = () => {
     })
 
 
-    const questionListings = filteredSearch.map((question)=>{
-        return <QuestionCard 
-            key={question.id}
-            questionId={question.id} 
-            questionTitle={question.title}
-            questionAnswer={question.answer}
-            questionImage={question.code}
-            handleReviewClick={handleReviewClick}
-            questionObj={question}
-        />
-    })
+    const questionListings =                 
+    <Grid container spacing={2}>
+    {filteredSearch.map((question)=>(
+        <Grid item xs={12} sm={6} md={4} key={question.id}>
+        <QuestionCard 
+                        key={question.id}
+                        questionId={question.id} 
+                        questionTitle={question.title}
+                        questionAnswer={question.answer}
+                        questionImage={question.code}
+                        handleReviewClick={handleReviewClick}
+                        questionObj={question}
+                        />
+                    </Grid>
+    ))}
+</Grid>
 
     return (
         <div>
@@ -71,13 +87,10 @@ const QuestionList = () => {
             search={search}
             handleSearchChange={handleSearchChange}
             />
-            <div>
-                <Container>
-                    <Grid container space={2} justify="center">
-                    {questionListings}
-                    </Grid>
-                </Container>
-            </div>
+        <div>
+            {questionListings}
+        </div>
+     
         </div>
     );
 };

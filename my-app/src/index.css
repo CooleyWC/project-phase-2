@@ -9,6 +9,7 @@ body {
 
 .header {
   text-align: center;
+  color: #cccccc
 }
 
 code {
@@ -26,3 +27,8 @@ code {
   max-width: 500px;
   max-height: 500px;
 }
+
+.filter {
+  color: #cccccc
+}
+

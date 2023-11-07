@@ -1,11 +1,9 @@
-import { Card, CardContent, Grid, Typography} from '@mui/material';
+import { Card, CardContent, Typography} from '@mui/material';
 import React, {useState} from 'react';
 
-import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
 
 
-const QuestionCard = ({questionTitle, questionAnswer, questionImage, questionId, questionObj, handleReviewClick}) => {
+const QuestionCard = ({questionTitle, questionAnswer, questionImage, questionObj, handleReviewClick}) => {
     const [cardFront, setCardFront] = useState(true);
 
 
@@ -17,14 +15,15 @@ const handleCardClick = ()=>{
     return (
   
          
-        <Card sx={{height: '100%'}}>
+        <Card sx={{backgroundColor: '#cce5ff', height: '100%'}} >
   
           
         <CardContent
             onClick={handleCardClick}
         >
-            {cardFront ? <Typography variant='h5'>{questionTitle}</Typography>
-            :   <><p>{questionAnswer}</p><img className='code-image' src={questionImage} alt='uh-oh'/>
+            {cardFront ? <Typography variant='h5' gutterBottom>{questionTitle}</Typography>
+            :   <><Typography variant='body1'>{questionAnswer}</Typography><img className='code-image' src={questionImage} alt='uh-oh'/>
+                <br></br>
                 <button onClick={(e)=>{
                 handleReviewClick(e, questionObj)
                 }}>{questionObj.review ? 'Remove from Review': 'Add to Review'}</button> </>}

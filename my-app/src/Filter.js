@@ -6,7 +6,7 @@ const Filter = ({handleCategoryFilter, filteredQuestions, handleDifficultyFilter
 
     return (
         <div>
-            <Typography variant='h4'>Filter</Typography>
+            <Typography variant='h4' className='filter'>Filter</Typography>
             <label>
                 <select onChange={handleCategoryFilter} value={filteredQuestions}>
                     <option value='all'>--Select a Category--</option>

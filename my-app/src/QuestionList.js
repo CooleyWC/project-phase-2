@@ -88,7 +88,9 @@ const QuestionList = () => {
             handleSearchChange={handleSearchChange}
             />
         <div>
+            <Container>
             {questionListings}
+            </Container>
         </div>
      
         </div>

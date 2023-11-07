@@ -3,9 +3,10 @@
     box-sizing: border-box;
     padding: 10px;
     text-align: left;
-    font-size: min(10vw, 20px)
+    font-size: min(10vw, 20px);
+    color: #cccccc
 }
 
 .active {
-    color: purple;
+    color: #66b3ff;
 }

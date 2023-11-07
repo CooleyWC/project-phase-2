@@ -1,5 +1,6 @@
-import { Card, CardContent, Typography} from '@mui/material';
+import { Button, Card, CardContent, Typography} from '@mui/material';
 import React, {useState} from 'react';
+
 
 
 
@@ -24,9 +25,9 @@ const handleCardClick = ()=>{
             {cardFront ? <Typography variant='h5' gutterBottom>{questionTitle}</Typography>
             :   <><Typography variant='body1'>{questionAnswer}</Typography><img className='code-image' src={questionImage} alt='uh-oh'/>
                 <br></br>
-                <button onClick={(e)=>{
+                <Button variant='contained' onClick={(e)=>{
                 handleReviewClick(e, questionObj)
-                }}>{questionObj.review ? 'Remove from Review': 'Add to Review'}</button> </>}
+                }}>{questionObj.review ? 'Remove from Review': 'Add to Review'}</Button> </>}
             
             </CardContent> 
      

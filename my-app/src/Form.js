@@ -60,11 +60,11 @@ const Form = () => {
 
     return (
         <Container>
-        <Box>
-        <div>
-            <Typography variant='h3' className='form'>Form</Typography>
-            <form onSubmit={handleSubmit} className='form'>
-                <Box mb={2}>
+            <Box>
+                <div>
+                <Typography variant='h3' className='form'>Form</Typography>
+                    <form onSubmit={handleSubmit} className='form'>
+                                <Box mb={2}>
                 <InputLabel sx={{color: '#cccccc'}}>Question Input</InputLabel>
                     <TextField sx={{width:'100%'}} multiline rows={4} name='question-input' placeholder='Enter question (limit 75 characters)' value={titleInput} onChange={handleTitleInput}/>
                     </Box>
@@ -103,9 +103,9 @@ const Form = () => {
                 <Button type='submit' variant='contained' size='large' color='secondary'>Submit</Button>
                
                 </Box>    
-            </form>
-        </div>
-        </Box>
+                    </form>
+                </div>
+            </Box>
         </Container>
     );
 };

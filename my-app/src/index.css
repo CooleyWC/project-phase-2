@@ -28,7 +28,7 @@ code {
   max-height: 500px;
 }
 
-.filter {
+.filter, .form, .review {
   color: #cccccc
 }
 
@@ -36,9 +36,9 @@ code {
   padding-bottom: 32px;
 }
 
-.form {
+/* .form {
   color: #cccccc
-}
+} */
 
 .menu-iem {
   width: 200px

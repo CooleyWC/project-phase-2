@@ -1,3 +1,4 @@
+import { Container, Typography } from '@mui/material';
 import React from 'react';
 import { useOutletContext } from 'react-router-dom';
 import QuestionCard from './QuestionCard';
@@ -26,8 +27,10 @@ const ReviewPage = () => {
 
     return (
         <div>
-            <h1>Review Page</h1>
+            <Container>
+            <Typography variant='h3' className='review' style={{paddingTop: '20px', paddingBottom: '20px'}}>Review Page</Typography>
             {reviewListings}
+            </Container>
         </div>
     );
 };

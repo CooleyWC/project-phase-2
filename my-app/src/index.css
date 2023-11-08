@@ -35,3 +35,11 @@ code {
 .App {
   padding-bottom: 32px;
 }
+
+.form {
+  color: #cccccc
+}
+
+.menu-iem {
+  width: 200px
+}

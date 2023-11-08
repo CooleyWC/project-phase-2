@@ -61,10 +61,10 @@ const QuestionList = () => {
 
 
     const questionListings =                 
-    <Grid container spacing={2}>
-    {filteredSearch.map((question)=>(
-        <Grid item xs={12} sm={6} md={4} key={question.id}>
-        <QuestionCard 
+        <Grid container spacing={2}>
+            {filteredSearch.map((question)=>(
+                <Grid item xs={12} sm={6} md={4} key={question.id}>
+                    <QuestionCard 
                         key={question.id}
                         questionId={question.id} 
                         questionTitle={question.title}
@@ -73,26 +73,25 @@ const QuestionList = () => {
                         handleReviewClick={handleReviewClick}
                         questionObj={question}
                         />
-                    </Grid>
-    ))}
-</Grid>
+                </Grid>
+            ))}
+        </Grid>
 
     return (
         <div>
             <Filter 
-            handleCategoryFilter={handleCategoryFilter} 
-            filteredQuestions={filteredQuestions}
-            handleDifficultyFilter={handleDifficultyFilter}
-            difficultyFilter={difficultyFilter}
-            search={search}
-            handleSearchChange={handleSearchChange}
+                handleCategoryFilter={handleCategoryFilter} 
+                filteredQuestions={filteredQuestions}
+                handleDifficultyFilter={handleDifficultyFilter}
+                difficultyFilter={difficultyFilter}
+                search={search}
+                handleSearchChange={handleSearchChange}
             />
-        <div>
-            <Container>
-            {questionListings}
-            </Container>
-        </div>
-     
+            <div>
+                <Container>
+                    {questionListings}
+                </Container>
+            </div>
         </div>
     );
 };

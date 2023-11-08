@@ -7,7 +7,7 @@
       "category": "jsx",
       "difficulty": "easy",
       "code": "./logo192.png",
-      "review": true
+      "review": false
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "category": "state",
       "difficulty": "medium",
       "code": "./logo192.png",
-      "review": true
+      "review": false
     },
     {
       "id": 3,
@@ -47,7 +47,7 @@
     },
     {
       "id": 6,
-      "title": "Explain prop descructuring.",
+      "title": "Explain prop destructuring.",
       "answer": "Prop destructuring is a technique in JavaScript and React that allows you to extract specific properties from an object and assign them to variables with the same names. By using curly braces {} and specifying the property names, you can destructure props directly in the function signature or within the function body. This approach simplifies the code and makes it easier to access and use specific props in your components. It also helps improve readability and maintainability by clearly indicating which props are being used.",
       "category": "components-props",
       "difficulty": "easy",
@@ -107,15 +107,6 @@
       "code": "./logo192.png",
       "review": false,
       "id": 12
-    },
-    {
-      "title": "hello",
-      "answer": "bro",
-      "category": "jsx",
-      "difficulty": "easy",
-      "code": "./logo192.png",
-      "review": false,
-      "id": 13
     }
   ]
 }

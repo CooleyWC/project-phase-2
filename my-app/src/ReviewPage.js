@@ -16,15 +16,15 @@ const ReviewPage = () => {
     const reviewListings = reviewQuestions.map((question)=>{
         return (
         <div key={question.id} style={{marginBottom: '20px'}}>
-        <QuestionCard 
-        key={question.id}
-        questionId={question.id} 
-        questionTitle={question.title}
-        questionAnswer={question.answer}
-        questionImage={question.code}
-        handleReviewClick={handleReviewClick}
-        questionObj={question}
-        />
+            <QuestionCard 
+                key={question.id}
+                questionId={question.id} 
+                questionTitle={question.title}
+                questionAnswer={question.answer}
+                questionImage={question.code}
+                handleReviewClick={handleReviewClick}
+                questionObj={question}
+            />
         </div>
         )
     })
@@ -32,10 +32,9 @@ const ReviewPage = () => {
     return (
         <div>
             <Container>
-                <Typography variant='h3' className='review' style={{paddingTop: '20px', paddingBottom: '20px'}}>Review Page</Typography>
-           
-                    {reviewListings}
-             
+                <Typography variant='h3' className='review' style={{paddingTop: '20px', paddingBottom: '20px'}}>
+                    Review Page</Typography> 
+                        {reviewListings}    
             </Container>
         </div>
     );

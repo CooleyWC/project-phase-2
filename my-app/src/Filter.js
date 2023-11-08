@@ -1,9 +1,7 @@
 import { Container, TextField, Typography } from '@mui/material';
 import React from 'react';
 import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 
@@ -12,13 +10,10 @@ const Filter = ({handleCategoryFilter, filteredQuestions, handleDifficultyFilter
     return (
         <div>
             <Container>
-            <Typography variant='h4' className='filter'>Filter</Typography>
-            <Box   sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-      }}>
+            <Typography variant='h4' className='filter' style={{paddingTop: '14px', paddingBottom: '14px'}}>Filter</Typography>
+            <Box   sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', paddingBottom: '20px', }}>
           
-            <InputLabel sx={{color: '#cccccc'}}>Category</InputLabel>
-                <Select  onChange={handleCategoryFilter} value={filteredQuestions}>
+                <Select  onChange={handleCategoryFilter} value={filteredQuestions} sx={{marginRight: '8px'}}>
                     <MenuItem value='all'>--Select a Category--</MenuItem>
                     <MenuItem value='jsx'>JSX</MenuItem>
                     <MenuItem value='components-props'>Components-Props</MenuItem>
@@ -26,9 +21,7 @@ const Filter = ({handleCategoryFilter, filteredQuestions, handleDifficultyFilter
                     <MenuItem value='router'>Router</MenuItem>
                 </Select>
        
-       
-            <InputLabel sx={{color: '#cccccc'}}>Difficulty</InputLabel>
-                <Select onChange={handleDifficultyFilter} value={difficultyFilter}>
+                <Select onChange={handleDifficultyFilter} value={difficultyFilter} sx={{marginRight: '8px'}}>
                     <MenuItem value='all'>--Select a Difficulty Level</MenuItem>
                     <MenuItem value='easy'>Easy</MenuItem>
                     <MenuItem value='medium'>Medium</MenuItem>
@@ -36,7 +29,7 @@ const Filter = ({handleCategoryFilter, filteredQuestions, handleDifficultyFilter
                 </Select>
     
        
-                <TextField id='outlined-basic' placeholder='search for question' onChange={handleSearchChange} value={search}/>
+                <TextField style={{color: '#cccccc'}} id='outlined-basic' placeholder='search for question' onChange={handleSearchChange} value={search}/>
          
             </Box>
             </Container>

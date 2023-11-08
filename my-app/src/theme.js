@@ -7,7 +7,7 @@ const theme = createTheme({
             main: '#007bff'
         },
         secondary: {
-            main: '#6c5ce7'
+            main: '#4682b4'
         },
         background: {
             default: '#333333'
@@ -17,15 +17,15 @@ const theme = createTheme({
         MuiInputBase: {
           styleOverrides: {
             root: {
-              color: '#fff', // Set the text color
+              color: '#fff', 
               '& .MuiOutlinedInput-notchedOutline': {
-                borderColor: 'rgba(255, 255, 255, 0.5)' // Set the outline color
+                borderColor: 'rgba(255, 255, 255, 0.5)'
               },
               '&:hover .MuiOutlinedInput-notchedOutline': {
-                borderColor: '#6c5ce7'// Set the hover outline color
+                borderColor: '#6c5ce7'
               },
               '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                borderColor: '#fff' // Set the focused outline color
+                borderColor: '#fff'
               }
             }
           }

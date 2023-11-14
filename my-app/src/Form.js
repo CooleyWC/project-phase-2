@@ -38,7 +38,6 @@ const Form = () => {
               "code": imageInput,
               "review": false
           }
-          console.log(newQuestion)
     
           fetch(URL, {
               method: "POST",

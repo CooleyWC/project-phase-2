@@ -31,7 +31,6 @@ function App() {
 
 
   const onAddNewQuestion = (newQuestion)=>{
-    console.log(newQuestion)
     setQuestionData(prevValue=>([...prevValue, newQuestion]))
   }
 

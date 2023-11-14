@@ -107,6 +107,15 @@
       "code": "./logo192.png",
       "review": false,
       "id": 12
+    },
+    {
+      "title": "sdf",
+      "answer": "sdf",
+      "category": "components-props",
+      "difficulty": "medium",
+      "code": "./logo192.png",
+      "review": false,
+      "id": 13
     }
   ]
 }

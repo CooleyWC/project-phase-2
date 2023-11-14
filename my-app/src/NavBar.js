@@ -7,11 +7,11 @@ const NavBar = () => {
     return (
         <nav>
             <CssBaseline />
-            <Breadcrumbs aria-label="breadcrumb">
-                <NavLink className='nav-link' to='/' > Home</NavLink>
-                <NavLink className='nav-link' to='/question/new'> Form</NavLink>
-                <NavLink className='nav-link' to='/review'> Review</NavLink>
-            </Breadcrumbs>
+                <Breadcrumbs aria-label="breadcrumb">
+                    <NavLink className='nav-link' to='/' > Home</NavLink>
+                    <NavLink className='nav-link' to='/question/new'> Form</NavLink>
+                    <NavLink className='nav-link' to='/review'> Review</NavLink>
+                </Breadcrumbs>
         </nav>
     );
 };

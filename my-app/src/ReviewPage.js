@@ -11,8 +11,6 @@ const ReviewPage = () => {
         return question.review === true
     })
 
-    console.log(reviewQuestions)
-
     const reviewListings = reviewQuestions.map((question)=>{
         return (
         <div key={question.id} style={{marginBottom: '20px'}}>

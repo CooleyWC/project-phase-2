@@ -63,46 +63,73 @@ const Form = () => {
             <Box>
                 <div>
                 <Typography variant='h3' className='form'>Form</Typography>
-                    <form onSubmit={handleSubmit} className='form'>
-                                <Box mb={2}>
-                <InputLabel sx={{color: '#cccccc'}}>Question Input</InputLabel>
-                    <TextField sx={{width:'100%'}} multiline rows={4} name='question-input' placeholder='Enter question (limit 75 characters)' value={titleInput} onChange={handleTitleInput}/>
+                <form onSubmit={handleSubmit} className='form'>
+                    <Box mb={2}>
+                        <InputLabel sx={{color: '#cccccc'}}>Question Input</InputLabel>
+                        <TextField 
+                            sx={{width:'100%'}} 
+                            multiline 
+                            rows={4} 
+                            name='question-input' 
+                            placeholder='Enter question (limit 75 characters)' 
+                            value={titleInput} 
+                            onChange={handleTitleInput}
+                        />
                     </Box>
                     <Box mb={2}>
-                <InputLabel sx={{color: '#cccccc'}}>Question Answer</InputLabel>
-                    <TextField sx={{width:'100%'}} multiline rows={8} name='answer-input' placeholder='Enter answer (limit 1050 characters)' value={answerInput} onChange={handleAnswerInput}/>
-                </Box>
-                <Box display='flex' flexDirection='row' alignItems='center' mb={2}>
-                    <Box display='flex' flexDirection='column' alignItems='left'>
-                <InputLabel sx={{color: '#cccccc'}}>Question Category</InputLabel>
-                    <Select sx={{ width: '350px', marginRight: '8px'}} value={categorySelect} onChange={(e)=>setCategorySelect(e.target.value)}>
-                        <MenuItem value=''>--Select a Category--</MenuItem>
-                        <MenuItem value='jsx'>JSX</MenuItem>
-                        <MenuItem value='components-props'>Components-Props</MenuItem>
-                        <MenuItem value='state'>State</MenuItem>
-                        <MenuItem value='router'>Router</MenuItem>
-                    </Select>
+                        <InputLabel sx={{color: '#cccccc'}}>Question Answer</InputLabel>
+                        <TextField 
+                            sx={{width:'100%'}} 
+                            multiline rows={8} 
+                            name='answer-input' 
+                            placeholder='Enter answer (limit 1050 characters)' 
+                            value={answerInput} 
+                            onChange={handleAnswerInput}
+                        />
                     </Box>
-              
-                    <Box display='flex' flexDirection='column' alignItems='left'>
-                <InputLabel sx={{color: '#cccccc'}}>Question Difficulty</InputLabel>
-                    <Select  sx={{ width: '350px', marginRight: '8px'}} value={difficultySelect} onChange={(e)=>{setDifficultySelect(e.target.value)}}>
-                        <MenuItem value=''>--Select a Difficulty Level</MenuItem>
-                        <MenuItem value='easy'>Easy</MenuItem>
-                        <MenuItem value='medium'>Medium</MenuItem>
-                        <MenuItem value='advanced'>Advanced</MenuItem>
-                    </Select>
-                    </Box>
-           
-                    <Box display='flex' flexDirection='column' alignItems='left'>
-                <InputLabel sx={{color: '#cccccc'}}>Code Image (optionial)</InputLabel>
-                    <TextField  sx={{ width: '350px', marginRight: '8px'}} type='text' placeholder='Enter code image' value={imageInput} onChange={(e)=>{setImageInput(e.target.value)}}/>
-                </Box>
-                </Box>
-                <Box textAlign='center'>
-                <Button type='submit' variant='contained' size='large' color='secondary'>Submit</Button>
-               
-                </Box>    
+                    <Box display='flex' flexDirection='row' alignItems='center' mb={2}>
+                        <Box display='flex' flexDirection='column' alignItems='left'>
+                            <InputLabel sx={{color: '#cccccc'}}>Question Category</InputLabel>
+                                <Select 
+                                    sx={{ width: '350px', marginRight: '8px'}} 
+                                    value={categorySelect} 
+                                    onChange={(e)=>setCategorySelect(e.target.value)}
+                                >
+                                    <MenuItem value=''>--Select a Category--</MenuItem>
+                                    <MenuItem value='jsx'>JSX</MenuItem>
+                                    <MenuItem value='components-props'>Components-Props</MenuItem>
+                                    <MenuItem value='state'>State</MenuItem>
+                                    <MenuItem value='router'>Router</MenuItem>
+                                </Select>
+                        </Box>
+                        <Box display='flex' flexDirection='column' alignItems='left'>
+                            <InputLabel sx={{color: '#cccccc'}}>Question Difficulty</InputLabel>
+                                <Select  
+                                    sx={{ width: '350px', marginRight: '8px'}} 
+                                    value={difficultySelect} 
+                                    onChange={(e)=>{setDifficultySelect(e.target.value)}}
+                                >
+                                    <MenuItem value=''>--Select a Difficulty Level</MenuItem>
+                                    <MenuItem value='easy'>Easy</MenuItem>
+                                    <MenuItem value='medium'>Medium</MenuItem>
+                                    <MenuItem value='advanced'>Advanced</MenuItem>
+                                </Select>
+                        </Box>
+                        <Box display='flex' flexDirection='column' alignItems='left'>
+                            <InputLabel sx={{color: '#cccccc'}}>Code Image (optionial)</InputLabel>
+                            <TextField  
+                                sx={{ width: '350px', marginRight: '8px'}} 
+                                type='text' 
+                                placeholder='Enter code image' 
+                                value={imageInput} 
+                                onChange={(e)=>{setImageInput(e.target.value)}}/>
+                        </Box>
+                        </Box>
+                            <Box textAlign='center'>
+                                <Button type='submit' variant='contained' size='large' color='secondary'>
+                                    Submit
+                                </Button>
+                        </Box>    
                     </form>
                 </div>
             </Box>

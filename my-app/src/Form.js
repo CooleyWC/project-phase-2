@@ -5,7 +5,6 @@ import { InputLabel, Typography, Container, TextField, Button } from '@mui/mater
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 
-
 const Form = () => {
     const {onAddNewQuestion, URL} = useOutletContext();
     const [titleInput, setTitleInput] = useState('');

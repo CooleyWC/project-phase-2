@@ -20,7 +20,6 @@ code {
 .question-card {
   border: 1px solid gray;
   background-color: lightgray;
-
 }
 
 .code-image {
@@ -35,10 +34,6 @@ code {
 .App {
   padding-bottom: 32px;
 }
-
-/* .form {
-  color: #cccccc
-} */
 
 .menu-iem {
   width: 200px

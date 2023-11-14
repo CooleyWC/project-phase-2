@@ -12,7 +12,6 @@ const QuestionList = () => {
     const [difficultyFilter, setDifficultyFilter] = useState('all')
     const [search, setSearch] = useState('')
 
-
     const handleCategoryFilter = (e) =>{
         setFilteredQuestions(e.target.value);
     }
@@ -44,7 +43,6 @@ const QuestionList = () => {
     const filteredSearch = filteredDifficulty.filter((question)=>{
         return question.title.toLowerCase().includes(search.toLowerCase())
     })
-
 
     const questionListings =                 
         <Grid container spacing={2}>

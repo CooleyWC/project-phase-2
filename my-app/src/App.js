@@ -1,9 +1,7 @@
 import { useEffect, useState} from 'react';
 import Header from './Header';
 import {Outlet} from 'react-router-dom'
-
 import './index.css'
-
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -16,7 +14,6 @@ function App() {
   const [questionData, setQuestionData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-
   useEffect(()=>{
     fetch(URL)
     .then(res=>res.json())
@@ -28,7 +25,6 @@ function App() {
   }, [])
 
   if(!isLoaded){return <h1>...Loading</h1>}
-
 
   const onAddNewQuestion = (newQuestion)=>{
     setQuestionData(prevValue=>([...prevValue, newQuestion]))
@@ -50,7 +46,6 @@ function App() {
     .then((updatedQuestion)=>{
         handleQuestionUpdate(updatedQuestion)
     })
-
 }
 
   const handleQuestionUpdate= (updatedQuestion)=>{
